@@ -22,3 +22,24 @@ li {
   margin: 0;
   padding: 0;
 }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.js-pics {
+  display: flex;
+  width: calc((100% - 30px * 3) / 4);
+  justify-content: space-between;
+  height: 300px;
+}
+
+.js-gallery {
+  display: flex;
+}
+
+.js-pics:not(:last-child) {
+  margin-right: 40px;
+}

@@ -26,20 +26,10 @@ const images = [
   },
 ];
 
-const createGallery = (pic) => {
-  const item = document.createElement("li");
-  item.classList.add("js-pics");
-  const image = document.createElement("img");
-  image.setAttribute("src", pic.url);
-  image.setAttribute("alt", pic.alt);
-  image.classList.add("js-img");
-  item.append(image);
-  return item;
-};
+const imgListRef = document.querySelector("#gallery");
 
-const imagesList = images.map((slide) => createGallery(slide));
-const galleryRef = document.querySelector("#gallery");
+const imgListString = images.reduce((totalString, element) => {
+  return (totalString += `<li><img src="${element.url}" alt="${element.alt}"/></li>`);
+}, "");
 
-galleryRef.classList.add("js-gallery");
-
-galleryRef.append(...imagesList);
+imgListRef.insertAdjacentHTML("afterbegin", imgListString);

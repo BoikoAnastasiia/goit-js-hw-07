@@ -36,10 +36,17 @@ img {
   height: 300px;
 }
 
-.js-gallery {
+#gallery {
   display: flex;
+  height: 300px;
 }
 
-.js-pics:not(:last-child) {
+#gallery li:not(:last-child) {
   margin-right: 40px;
+}
+
+h3 {
+  color: lightcoral;
+  text-transform: uppercase;
+  font-size: 36px;
 }

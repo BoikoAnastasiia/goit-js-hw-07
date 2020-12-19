@@ -5,8 +5,10 @@
 
 const inputRef = document.querySelector("#name-input");
 const nameOutput = document.querySelector("#name-output");
-if (inputRef.input === null) {
-  nameOutput.textContent === "незнакомец";
-} else {
-  inputRef.input = nameOutput.textContent;
-}
+
+inputRef.addEventListener("input", (event) => {
+  if (event.target.value === null) {
+    nameOutput.textContent = "незнакомец";
+  }
+  nameOutput.textContent = event.target.value;
+});

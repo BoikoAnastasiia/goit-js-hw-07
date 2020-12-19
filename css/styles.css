@@ -53,11 +53,12 @@ h2 {
 #gallery {
   display: flex;
   height: 300px;
+  align-items: center;
 }
-#gallery img:first-child {
+/* #gallery img::first-child {
   height: 100%;
   width: auto;
-}
+} */
 
 #gallery li:not(:last-child) {
   margin-right: 40px;
@@ -79,4 +80,9 @@ h3 {
   font-size: 1rem;
   letter-spacing: 0.15rem;
   border-width: 0;
+  font-size: 36px;
+  color: aliceblue;
+  font-weight: 700;
+  margin-right: 10px;
+  margin-left: 10px;
 }

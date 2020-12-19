@@ -33,5 +33,6 @@ const imgListString = images.reduce((totalString, element) => {
 }, "");
 
 imgListRef.insertAdjacentHTML("afterbegin", imgListString);
-const cat = document.querySelector(img);
-cat.classList.add(cat);
+
+// const cat = document.querySelector("img");
+// cat.classList.add(cat);

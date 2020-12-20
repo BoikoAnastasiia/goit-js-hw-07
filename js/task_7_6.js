@@ -7,15 +7,29 @@
 // Для добавления стилей, используй CSS-классы valid и invalid.
 
 const inputRef = document.querySelector("#validation-input");
-const right = inputRef.classList.add(".valid");
-const wrong = inputRef.classList.add(".invalid");
 
-const lenght = inputRef.dataset.length;
-console.log(lenght);
+const checkinputLength = () => {
+  inputRef.value.length === Number(inputRef.dataset.length)
+    ? inputRef.classList.add("valid")
+    : inputRef.classList.add("invalid");
+};
 
-inputRef.addEventListener("blur", (event) => {
-  if (event.target.value.lenght < 6) {
-    return wrong;
-  }
-  return right;
-});
+const inputFocus = () => {
+  inputRef.classList.remove("valid", "invalid");
+};
+
+inputRef.addEventListener("blur", checkinputLength);
+inputRef.addEventListener("focus", inputFocus);
+
+// const right = inputRef.classList.add(".valid");
+// const wrong = inputRef.classList.add(".invalid");
+
+// const lenght = inputRef.dataset.length;
+// console.log(lenght);
+
+// inputRef.addEventListener("blur", (event) => {
+//   if (event.target.value.lenght < lenght) {
+//     return wrong;
+//   }
+//   return right;
+// });

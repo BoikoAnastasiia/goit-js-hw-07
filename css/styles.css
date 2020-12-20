@@ -103,3 +103,22 @@ h3 {
   border-radius: 5px;
   outline-color: rgb(117, 88, 108);
 }
+
+#validation-input {
+  border: 3px solid #bdbdbd;
+  font-size: 20px;
+  border-color: plum;
+  border-radius: 5px;
+  outline-color: rgb(117, 88, 108);
+}
+
+#validation-input.valid {
+  border-color: #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
+}
+footer {
+  padding-top: 160px;
+}

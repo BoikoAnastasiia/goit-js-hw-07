@@ -7,8 +7,27 @@ const inputRef = document.querySelector("#name-input");
 const nameOutput = document.querySelector("#name-output");
 
 inputRef.addEventListener("input", (event) => {
-  if (event.target.value === null) {
-    nameOutput.textContent = "незнакомец";
+  if (event.target.value === "") {
+    return (nameOutput.textContent = "незнакомец");
   }
-  nameOutput.textContent = event.target.value;
+  return (nameOutput.textContent = event.target.value);
 });
+
+// nameOutput.hidden = true;
+
+// const checkUp = () => {
+//   let userInfo = inputRef.value.trim();
+//   nameOutput.hidden = false;
+//   inputRef.value.length === 0
+//     ? (nameOutput.textContent = "незнакомец")
+//     : (nameOutput.textContent = userInfo);
+// };
+// inputRef.addEventListener("input", checkUp);
+// inputRef.addEventListener("blur", checkUp);
+
+// inputRef.addEventListener("input", (event) => {
+//   if (event.target.value === null) {
+//     nameOutput.textContent = "незнакомец";
+//   }
+//   nameOutput.textContent = event.target.value;
+// });
